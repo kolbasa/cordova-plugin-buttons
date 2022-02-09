@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-buttons" version="1.0.1">
+
+    <name>Cordova Buttons Plugin</name>
+    <license>MIT</license>
+    <author>Michael Jedich</author>
+
+    <description>TODO</description>
+    <keywords>android,buttons</keywords>
+    <repo>https://github.com/kolbasa/cordova-plugin-buttons</repo>
+    <issue>https://github.com/kolbasa/cordova-plugin-buttons/issues</issue>
+
+    <engines>
+        <engine name="cordova" version=">=9.0.0"/>
+        <engine name="cordova-android" version=">=9.0.0"/>
+    </engines>
+
+    <js-module src="www/Buttons.js" name="Buttons">
+        <clobbers target="window.Buttons"/>
+    </js-module>
+    <js-module src="www/API.js" name="API"/>
+
+    <platform name="android">
+
+        <preference name="EVENTBUS_VERSION" default="3.0.0" />
+        <framework src="org.greenrobot:eventbus:$EVENTBUS_VERSION"/>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Buttons">
+                <param name="android-package" value="de.kolbasa.buttons.Buttons"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/Buttons.java" target-dir="src/de/kolbasa/buttons"/>
+
+    </platform>
+
+</plugin>

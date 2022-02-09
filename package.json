@@ -1,0 +1,26 @@
+{
+  "name": "cordova-plugin-buttons",
+  "version": "1.0.1",
+  "description": "TODO",
+  "cordova": {
+    "id": "cordova-plugin-buttons",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "android",
+    "buttons",
+    "permission"
+  ],
+  "author": "Michael Jedich",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kolbasa/cordova-plugin-buttons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kolbasa/cordova-plugin-buttons/issues"
+  },
+  "homepage": "https://github.com/kolbasa/cordova-plugin-buttons"
+}
