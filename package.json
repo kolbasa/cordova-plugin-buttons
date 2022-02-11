@@ -1,7 +1,7 @@
 {
   "name": "cordova-plugin-buttons",
-  "version": "1.0.1",
-  "description": "TODO",
+  "version": "1.0.0",
+  "description": "Allows you to listen to the hardware buttons on Android devices.",
   "cordova": {
     "id": "cordova-plugin-buttons",
     "platforms": [
@@ -10,8 +10,9 @@
   },
   "keywords": [
     "android",
+    "hardware",
     "buttons",
-    "permission"
+    "listener"
   ],
   "author": "Michael Jedich",
   "license": "MIT",
