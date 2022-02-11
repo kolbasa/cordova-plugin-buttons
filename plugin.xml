@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"
-        id="cordova-plugin-buttons" version="1.0.1">
+        id="cordova-plugin-buttons" version="1.0.0">
 
     <name>Cordova Buttons Plugin</name>
     <license>MIT</license>
     <author>Michael Jedich</author>
 
-    <description>TODO</description>
-    <keywords>android,buttons</keywords>
+    <description>Allows you to listen to the hardware buttons on Android devices.</description>
+    <keywords>android,hardware,buttons,listener</keywords>
     <repo>https://github.com/kolbasa/cordova-plugin-buttons</repo>
     <issue>https://github.com/kolbasa/cordova-plugin-buttons/issues</issue>
 
@@ -24,7 +24,9 @@
 
     <platform name="android">
 
-        <preference name="EVENTBUS_VERSION" default="3.0.0" />
+        <hook type="after_prepare" src="hooks/after_prepare.js"/>
+
+        <preference name="EVENTBUS_VERSION" default="3.3.1" />
         <framework src="org.greenrobot:eventbus:$EVENTBUS_VERSION"/>
 
         <config-file target="res/xml/config.xml" parent="/*">
