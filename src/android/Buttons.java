@@ -63,7 +63,6 @@ public class Buttons extends CordovaPlugin {
     }
 
     private void registerCallback(CallbackContext callbackContext) {
-        unregisterCallback();
         this.cbc = callbackContext;
         PluginResult response = new PluginResult(PluginResult.Status.OK);
         response.setKeepCallback(true);
