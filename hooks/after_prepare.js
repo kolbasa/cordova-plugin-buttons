@@ -12,7 +12,7 @@ module.exports = function (context) {
     let configXmlPath = path.join(context.opts.projectRoot, 'config.xml');
 
     let configXml = fs.readFileSync(configXmlPath, UTF8);
-    let appId = configXml.split('<widget id=\"').pop().split('\"')[0];
+    let appId = configXml.split(' id=\"').pop().split('\"')[0];
     let packageName = appId.replace(/\./g, '/');
 
     const MainActivity = platformRoot + '/' + packageName + '/MainActivity.java';
