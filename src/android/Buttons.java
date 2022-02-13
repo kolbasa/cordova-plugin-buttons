@@ -54,7 +54,7 @@ public class Buttons extends CordovaPlugin {
         this.cbc.sendPluginResult(response);
     }
 
-    private void registerGeneralButtonListener() {
+    private void registerButtonListener() {
         EventBus.getDefault().register(this);
     }
 
@@ -81,7 +81,7 @@ public class Buttons extends CordovaPlugin {
     private void subscribe(CallbackContext callbackContext) {
         try {
             cleanup();
-            registerGeneralButtonListener();
+            registerButtonListener();
             registerCallback(callbackContext);
         } catch (Exception e) {
             callbackContext.error(e.getMessage());
