@@ -16,9 +16,9 @@ module.exports = {
     subscribe: function (callback) {
         return new Promise(function (resolve, reject) {
             _callback = function (result) {
-                if (result === 1) {
-                    resolve('OK');
-                } else {
+                if (result === "subscribed") {
+                    resolve(result);
+                } else if (typeof result === "object") {
                     callback(result);
                 }
             };

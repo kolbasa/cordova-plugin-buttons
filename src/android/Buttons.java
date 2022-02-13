@@ -64,14 +64,14 @@ public class Buttons extends CordovaPlugin {
 
     private void registerCallback(CallbackContext callbackContext) {
         this.cbc = callbackContext;
-        PluginResult response = new PluginResult(PluginResult.Status.OK);
+        PluginResult response = new PluginResult(PluginResult.Status.OK, "subscribed");
         response.setKeepCallback(true);
         callbackContext.sendPluginResult(response);
     }
 
     private void unregisterCallback() {
         if (this.cbc != null) {
-            this.cbc.success("Callback closed");
+            this.cbc.success();
             this.cbc = null;
         }
         this.lastDownTime = null;
@@ -90,7 +90,7 @@ public class Buttons extends CordovaPlugin {
     private void unsubscribe(CallbackContext callbackContext) {
         try {
             cleanup();
-            callbackContext.success();
+            callbackContext.success("unsubscribed");
         } catch (Exception e) {
             callbackContext.error(e.getMessage());
         }
